@@ -16,7 +16,9 @@ h1 {
     padding: 1rem 2rem;
 }
 .item-part-api {
+    padding: 1rem;
     display: flex;
+    max-width: calc(100vw - 300px);
     width: 100%;
     top: 5rem;
     position: absolute;

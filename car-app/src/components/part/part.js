@@ -14,8 +14,8 @@ import { useEffect } from 'react';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    maxWidth: "80rem",
-    margin: "0 auto",
+    // maxWidth: "60rem",
+    // margin: "0 auto",
   },
   title: {
     fontSize: 24,
@@ -110,17 +110,22 @@ export function Item(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button onClick={partSelect} size="small">
+          { props.from != 'cart'?
+            <Button onClick={partSelect} size="small">
             Learn More
-					</Button>
+					</Button>: <></>
+          }
         </CardActions>
       </Card>
     );
   } else {
     const addToCart = () => {
       setSelectedModel(null);
-      let items = [...config.globalState.getGlobalState('cart').items, apiPart];
-      setSelectedCart({ items: items, open: items.length? true: false });
+      const cart = config.globalState.getGlobalState('cart');
+      if(!cart.items.map(i => i.pkPart).includes(apiPart.pkPart)) {
+        let items = [...cart.items, apiPart];
+        setSelectedCart({ items: items, open: items.length? true: false });
+      }
       
       navigate('/');
     };

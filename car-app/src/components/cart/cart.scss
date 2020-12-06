@@ -1,4 +1,14 @@
-
-.component-cart{
-    
+.component-cart {
+  display: flex;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 56px);
+}
+.cart-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+.cart-item {
+  padding: 1rem;
 }
