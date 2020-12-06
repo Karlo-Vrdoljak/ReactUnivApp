@@ -19,6 +19,10 @@ app.get('/manufacturer/:pkManufacturer/', (req, res) => {
     res.send(db.manufacturers.find(m => m.pkManufacturer == req.params.pkManufacturer));
 });
 
+app.get('/part/:pkPart/', (req, res) => {
+    res.send(db.parts.find(i => i.pkPart == req.params.pkPart));
+});
+
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)

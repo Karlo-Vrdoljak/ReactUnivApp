@@ -1,5 +1,16 @@
 
 .component-part{
-    width: 100%;
     height: calc(100vh - 56px);
+}
+
+.h1-wrap {
+    background-color: #383838;
+    padding: 2rem;
+}
+h1 {
+    margin: 0;
+}
+.item-list {
+    overflow-y: auto;
+    padding: 1rem 2rem;
 }

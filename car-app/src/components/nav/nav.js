@@ -9,6 +9,7 @@ import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 const useStyles = makeStyles({
   root: {
     width: '100vw',
+    background: '#383838'
   },
 });
 
