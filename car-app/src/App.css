@@ -18,3 +18,9 @@
 .App-link {
   color: #61dafb;
 }
+
+.flex-dialog-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
